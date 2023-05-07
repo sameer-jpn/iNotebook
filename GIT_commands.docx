@@ -1,0 +1,159 @@
+command + shift + period  -->  hide/unhide  hidden files on MACOS
+fn + shift + up/down      -->  scroll page UP/DOWN in terminal
+
+
+GIT commands
+
+git config —global user.name <username>  -  to set user name
+
+git config —global user.email <useremail>  -  to set user email
+
+git config —global user.name   - to print current username
+
+git config —global user.email   - to print current useremail
+
+git init   - initialises empty git repository..
+
+ls -lart  - shows hidden folders also
+
+git status      - to see the status
+￼
+rm -rf .git  --> this removes the .git file i.e. it makes the folder a normal folder.. non git repository
+
+Staging Area - state which contains the files which needs to commit. If any file you don’t want to commit, then don’t add that file to staging area.
+			example - raise mein Toni dukaan pr kiss ki list ka samaan nikalta hn.. to us samaan ko staging kahenge..
+Git Directory - fer us samaan ko 1 peti/ katte mein pack krne ke baad.. bahar se nhi dikhta use git directory kehte hein..
+Working Directory - how it looks in file explorer in a system is called..
+
+working directory se directly Git Directory mein phi daal site hein.. but it is a good practice to stage
+
+
+git commit    —>. It will open VM edit…  press I.. then write the message you want to give to this commit.. (for reference only what are changes or what is the purpose of this change)
+
+git commit -m "<commit message>"  --> commits everything on the staging area
+
+git commit -a -m “<write commit message>”  --> if want to commit unstaged files by skipping staging area
+
+git commit --amend --> this will edit the last commit & also will merge any staged changes with the last commit only.
+					the above will open the editor .. then PRESS i  to enter edit mode
+													  then make the desired change 
+													  then type :wq  & press enter  to commit the change
+
+touch about.java    —> creates blank file
+
+git add --a || git add .  —> both commands is to add all the UNTRACKED/modified files to STAGED state
+git add -u                -> stages only the modifications & ignores the UNTRACKED files
+
+git restore --staged <filename/filepath>  --> will unstage the modifications & mark it as modified again
+
+
+clear   —> clears up the terminal
+
+
+
+
+git log         		   —> logs all the changes with Commit Message, Author name, email id, date time
+git log -p      		   -> gives the details of the change which were done in those commits
+git log --stat  		   -> it gives a very short summary of all the commits
+git log --pretty=oneline   -> gives the log in just one line i.e. only the comment which was added while commit
+        --pretty=short     -> gives in short what was done in all the commits individually
+        --pretty=full      -> gives committer details also.
+FORMAT LOG
+git log --pretty=format:"<your_given_format"  --> gives logs in the format provided which can be useful just like SQL query
+
+
+APPLY filters while fetching logs
+git log --since=N.days     -> shows log since last N days
+			   =N.weeks    -> shows log since last N weeks
+			   =N.months   -> shows log since last N months
+			   =N.years    -> shows log since last N years
+			   =N.hours    -> shows log since last N hours
+			   =N.minutes  -> shows log since last N minutes
+			   =N.seconds  -> shows log since last N seconds
+
+Author --> who created the file
+Committer --> who committed the file
+
+if I want to see only few number of logs..
+	git log -p -<number of logs>  
+e.g.  git log -p -5     this will also show the details of 5 changes
+
+git diff  ->  compares the working directory with staging area..
+
+if want to compare staging area with last commit
+	git diff --staged
+
+
+git rm <filename>
+deletes the file from system & git & also stages this change
+
+git rm --cached <filename>
+deletes the file from tracking
+
+git status -s    (short status)
+shows the status of files
+first column in staging area
+second column in working directory
+￼
+.gitignore file
+if any file name is mentioned inside this file, the git will ignore this file at every command i.e git status, git commit etc.
+example -->  error.log >>> then this is hide this error.log file from working directory to be staged
+example -->  *.log     >>> then this will hide all the .log files from working directory to be staged
+example --> dir/       >>> then all folders naming dir will be ignored. (so directories can also be ignored in .gitignore file)
+example --> /dir/      >>> this will only ignore outer dir .. but will include inside directories
+
+
+Branches -
+	master - by default the main branch
+
+	git branch <branchName>  --> to create new branch branchName but stays on current ongoing branch
+
+	git checkout -b <newBranchName>  --> this creates new branch newBranchName & switches to this newBranchName
+									 --> the above command actually executes 2 commands 
+									 		git branch newBranchName
+									 		git switch newBranchName
+	git switch -c <newBranchName>    --> similar to above 'checkout -b' command
+	
+	git checkout <branchName>  --> change working branch to branchName	
+								
+	git merge <sub branch name> ( before this execute, you should be in the branch in which we need to commit)
+
+	git branch -d --> for deleting the obsolete target branch
+
+
+	git checkout <filename>   	 —> matches the file with the last commit version   , in other words used to recover previously saved changes.
+
+	git checkout -- <filename>   --> this will match the file <filename> with the last commit.. all changes after last commit will be lost.
+							 --> EXCEPTION : this command don't have any affect on  .gitignore  file.. this is security feature of git
+
+	NOTE : the difference between above two ::::
+		-- states that after this treat all values as filenames.  useful when your filename is same as branch name.
+	
+	git checkout -f  —> all files will be matched with the last commit
+	git checkout -b <new_branch_name>  --> this will create a new branch & switch to that new branch
+
+git remote add origin <my_url>  --> this adds a remote repository with the name origin & having the url as <my_url> ||| here origin is a name I gave which can be changed BUT it is a common name which is used.. so keep using origin only
+git remote 						--> shows remote repositories
+git remote -v  					--> this shows both fetch & pull urls
+
+git config alias.st status  	--> this sets a alias for status keyword
+git config alias.<your_Keyword> '<expression_to_be_aliased'  --> this makes an alias for the expression mentioned in the quotes
+
+------------- creating SSH key for authentication -------------
+
+git push <remotebranchname> <localBranchName>
+`
+git branch -a  --> to list all local & remote branches
+
+(macOS) press q - come out of editor & see the command line for new commands
+
+git clone <git_url> <folder_name_I_want_to_give>
+
+
+********************** DOUBTS *********************
+DOUBT to be asked 
+why dir  folder is not being tracked in git 
+Answer --->  git ignores empty folders & folders containing only ignored files
+
+Things to be done yet :
+Working with remote repositories not working properly.

@@ -1,0 +1,21 @@
+This is random txt file version 1 & this is also in develop
+This is very important change to be committed
+This change is inside develop
+
+<html> </html>
+
+<!DOCTYPE html>
+
+
+    <html itemscope itemtype="https://schema.org/QAPage" class="html__responsive " lang="en">
+
+    <head>
+
+        <title>What is the difference between &quot;git branch&quot; and &quot;git checkout -b&quot;? - Stack Overflow</title>
+        <link rel="shortcut icon" href="https://cdn.sstatic.net/Sites/stackoverflow/Img/favicon.ico?v=ec617d715196">
+        <link rel="apple-touch-icon" href="https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon.png?v=c78bd457575a">
+        <link rel="image_src" href="https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon.png?v=c78bd457575a"> 
+        <link rel="search" type="application/opensearchdescription+xml" title="Stack Overflow title changed" href="/opensearch.xml">
+        <link rel="canonical" href="https://stackoverflow.com/questions/7987687/what-is-the-difference-between-git-branch-and-git-checkout-b" />
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0">
+        
