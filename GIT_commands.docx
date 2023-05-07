@@ -108,6 +108,8 @@ Branches -
 
 	git branch <branchName>  --> to create new branch branchName but stays on current ongoing branch
 
+	git branch -v  --> shows the last commit ID & commit message of all the available branches
+
 	git checkout -b <newBranchName>  --> this creates new branch newBranchName & switches to this newBranchName
 									 --> the above command actually executes 2 commands 
 									 		git branch newBranchName
@@ -118,7 +120,12 @@ Branches -
 								
 	git merge <sub branch name> ( before this execute, you should be in the branch in which we need to commit)
 
-	git branch -d --> for deleting the obsolete target branch
+	git branch --merged  --> shows the branches merged to master
+
+	git branch --no-merged  --> shows the branches not merged to master
+
+	git branch -d <branch-name>  --> for deleting merged branches but gives ERROR in case of non-merged branch
+	git branch -D <branch-name>  --> deletes any branch without any error
 
 
 	git checkout <filename>   	 —> matches the file with the last commit version   , in other words used to recover previously saved changes.
