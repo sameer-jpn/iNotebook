@@ -39,8 +39,7 @@ import io.swagger.annotations.ApiResponses;
 
 @RestController
 public class CreateApplicationBusinessController {
-
-	@Autowired
+	
 	private CreateApplicationBusinessService createAppInsuranceBusinessService;
 
 	@Autowired
