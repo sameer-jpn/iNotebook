@@ -40,7 +40,7 @@ import io.swagger.annotations.ApiResponses;
 @RestController
 public class CreateApplicationBusinessController {
 
-	@Autowired
+	@RestController
 	private CreateApplicationBusinessService createAppInsuranceBusinessService;
 
 	@Autowired
